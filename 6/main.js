@@ -1,3 +1,5 @@
+//CONSEGNA Stampa il cubo dei primi N numeri, dove N è un numero indicato dall’utente.
+
 var lista = [];
 
  var numeroutente = prompt('inserisci un numero da 1 a 9')

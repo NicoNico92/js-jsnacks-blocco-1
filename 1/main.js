@@ -1,3 +1,5 @@
+//CONSEGNA: L’utente inserisce due numeri in successione, con due prompt. Il software stampa il maggiore.
+
 //chiedo all'utente di inserire 2 numeri e li stampo a console
 var number1 = parseInt(prompt('inserisci un numero'));
 console.log(number1);

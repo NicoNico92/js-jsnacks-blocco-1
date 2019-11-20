@@ -1,4 +1,4 @@
-
+//CONSEGNA: Calcola la somma e la media dei primi 10 numeri.
 
 //inserisco una var somma iniziale =0, che una volta entrata nel ciclo crescerà, aumentando la somma ad ogni giro
 var somma = 0;

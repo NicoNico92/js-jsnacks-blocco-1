@@ -1,3 +1,4 @@
+//CONSEGNA: L’utente inserisce due parole in successione, con due prompt. Il software stampa prima la parola più corta, poi la parola più lunga.
 
 //chiedo all'utente di inserire sue parole e confronto in seguito la loro lunghezza per individuare la più lunga
 var parola1 = prompt('Inserisci una parola');

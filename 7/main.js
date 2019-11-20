@@ -1,3 +1,5 @@
+//CONSEGNA Stampa le potenze di 2 fino a 1000.
+
 //inserisco una var iniziale uguale a 0,  poi una var p che risponde a una funzione con base 2 e un esponente che cresce ogni  volta che entra in un ciclo while, così da restituire una potenza sempre maggiore di 2.
 var i = 0;
 var p = Math.pow(2,i);

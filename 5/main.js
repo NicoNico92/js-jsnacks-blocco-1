@@ -1,3 +1,5 @@
+//CONSEGNA: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+
 //creo un array inizialmente vuoto che si arricchirà di numeri se nei 5 digitati dall'utente ce ne saranno di dispari
 var lista = [];
 
