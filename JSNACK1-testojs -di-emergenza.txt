@@ -1,0 +1,176 @@
+ESERCIZIO 1.
+//chiedo all'utente di inserire 2 numeri e li stampo a console
+var number1 = parseInt(prompt('inserisci un numero'));
+console.log(number1);
+var number2 = parseInt(prompt('inserisci un altro numero'));
+console.log(number2);
+
+// con la funzione math individuo immediatamente il numero maggiore e lo stampo a console
+//var a = Math.max(number1, number2);
+//console.log(a);
+
+//confronto inizialmente i due numeri per individuare se sono uguali, dopodichè se non sono uguali li inserisco in una lista e la ordino in modo decrescente in modo da poter stampare poi a console l'elemento 0 della lista
+if (number1 == number2) {
+console.log('I due numeri sono uguali');
+} else {
+var lista = [number1, number2];
+console.log(lista);
+lista.sort(function(a,b){return b-a});
+console.log(lista);
+console.log('Il numero maggiore è ' + lista[0]);
+}
+
+-------------------------------
+ESERCIZIO 2.
+//chiedo all'utente di inserire sue parole e confronto in seguito la loro lunghezza per individuare la più lunga
+var parola1 = prompt('Inserisci una parola');
+console.log(parola1);
+var parola2 = prompt("Inserisci un'altra parola");
+console.log(parola2);
+if (parola1.length == parola2.length) {
+    console.log('Le due parole hanno la stessa lunghezza');
+} else if (parola1.length > parola2.length){
+    console.log('La parola ' + parola1 + ' è la più lunga')
+} else {
+    console.log('La parola ' + parola2 + ' è la più lunga')
+}
+
+-------------------------------
+ESERCIZIO 3.
+//somma iniziale = 0
+var somma=0;
+
+//SOLUZIONE ciclo for OSCURATA
+//chiedo 5 volte il numero e ad ogni ciclo lo aggiungo alla somma
+// for (var i=0; i < 5; i++) {
+//     var numero = parseInt(prompt('Inserisci un numero'));
+// somma = somma + numero;}
+
+//imposto una var i iniziale uguale a 0 che aumenterà di uno ad ogni ciclo, fino a diventare 5 e quindi interrompendolo. Chiedo così 5 volte il numero e a ogni ciclo lo aggiungo alla somma
+var i=0;
+while (i < 5) {
+    var numero = parseInt(prompt('Inserisci un numero'));
+    somma = somma + numero;
+    i++;
+}
+
+//visualizzo somma finale a schermo
+console.log(somma);
+
+------------------------------
+ESERCIZIO 4.
+//creo una lista array di nomi ammessi
+var lista = ['pippo','pluto','paperino'];
+
+//faccio inserire un nome all'utente
+var nomeutente = prompt("Insert your name please:");
+console.log('hai inserito: ' + nomeutente);
+
+//imposto un var utenteinvitato 0 o false
+ var utenteinvitato = 0;
+
+//faccio entrare il nome inserito dall'utente in un ciclo: se incluso nell'array la var nomeutente cambierà in uno o true
+ for (var i = 0; i < lista.length; i++) {
+    if (nomeutente == lista[i])
+      { utenteinvitato = 1;
+   }
+ }
+
+//faccio comparire un messaggio a console in base al valore della car utenteinvitato
+ if (utenteinvitato == 1) {
+    console.log('Sei benvenuto');
+ } else {
+  console.log('Non sei invitato');
+}
+
+------------------------------
+ESERCIZIO 5.
+//creo un array inizialmente vuoto che si arricchirà di numeri se nei 5 digitati dall'utente ce ne saranno di dispari
+var lista = [];
+
+ for (var i = 0; i < 6; i++) {
+     var numeroutente = parseInt(prompt('inserisci un numero'));
+     if (numeroutente % 2== 0) {
+        console.log('il numero è pari');
+     } else if (numeroutente % 2 == 1) {
+         console.log('il numero è dispari');
+         lista.push(numeroutente);
+     } else {
+        console.log('non hai inserito un numero valido');
+    }
+ }
+
+console.log(lista);
+
+------------------------------
+ESERCIZIO 6.
+var lista = [];
+
+ var numeroutente = prompt('inserisci un numero da 1 a 9')
+
+ for (var i = 1; i <= numeroutente; i++) {
+     var cubo = Math.pow(i, 3);
+     console.log(cubo);
+     lista.push(cubo);
+ }
+
+ console.log(lista);
+
+-----------------------------
+ESERCIZIO 7.
+//inserisco una var iniziale uguale a 0,  poi una var p che risponde a una funzione con base 2 e un esponente che cresce ogni  volta che entra in un ciclo while, così da restituire una potenza sempre maggiore di 2. 
+var i = 0;
+var p = Math.pow(2,i);
+while (p < 1000) {
+    i++;
+    //Inserisco il consolo.log prima della fine dell'ultimo ciclo in modo che non compaia la potenza di 2 1024 che è superiore di 1000  
+    console.log(p);
+    p = Math.pow(2,i);
+}
+
+-----------------------------
+ESERCIZIO 8.
+// faccio inserire un numero di 4 cifre senza parseInt per sfruttare il fatto che compare sotto forma di stringa e quindi trasformo i singoli numeri che lo compongono in numero solo quando entrato nell'espressione della somma
+var numero = prompt('Inserisci un numero di 4 cifre');
+console.log(numero);
+    var somma = 0;
+    for (var i = 0; i < numero.length; i++) {
+        somma = (somma) + parseInt(numero[i]);
+    }
+    console.log('la somma è ' + somma);
+
+// SOLUZIONE INDIVIDUATA SU STACK OVERFLOW
+//     var value = parseInt(prompt('inserisci un numero a 4 cifre')),
+//     sum = 0;
+// while (value) {
+//     sum += value % 10;
+//     value = Math.floor(value / 10);
+// }
+// console.log(sum);
+
+------------------------------
+ESERCIZIO 9.
+
+//inserisco una var somma iniziale =0, che una volta entrata nel ciclo crescerà, aumentando la somma ad ogni giro
+var somma = 0;
+for (var i = 1; i < 11; i++) {
+    somma = (somma) + i;
+}
+//calcolo la media a partire dalla  somma fatta
+var media = somma / 10;
+console.log('la somma è ' + somma);
+console.log('la media è ' + media);
+
+
+// //SOLUZIONE INDIVIDUATA SU STACK OVERFLOW
+// var i;
+// var elmt = new Array();
+// for (var i = 1; i < 11; i++) {
+//     elmt.push(i);
+// }
+// var sum = 0;
+// for( var i = 0; i < elmt.length; i++ ){
+//     sum += parseInt( elmt[i], 10 ); //don't forget to add the base
+// }
+// var avg = sum/elmt.length;
+// document.write( "The sum of all the elements is: " + sum + " The average is: " + avg );
